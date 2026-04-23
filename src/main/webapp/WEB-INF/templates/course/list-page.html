@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="layout/main-layout">
+<head>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<div layout:fragment="content" class="container">
+
+    <div class="search-bar">
+        <form th:action="@{/course/list}" method="get">
+            <select name="level">
+                <option value="ALL">All</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+
+            <input name="price" placeholder="Max price">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <p class="empty" th:if="${#lists.isEmpty(courses)}">
+        Hiện chưa có lớp học phù hợp với trình độ này!
+    </p>
+
+    <table th:if="${!#lists.isEmpty(courses)}">
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+
+        <tr th:each="c : ${courses}">
+            <td th:text="${c.name}"></td>
+            <td th:text="${c.price}"></td>
+            <td>
+                <a class="btn-link" th:href="@{'/course/detail/' + ${c.code}}">Detail</a>
+                <a class="btn-link" th:href="@{'/course/edit/' + ${c.code}}">Edit</a>
+
+                <form th:action="@{'/course/delete/' + ${c.code}}" method="post" style="display:inline;">
+                    <button type="submit" class="btn-delete">Delete</button>
+                </form>
+            </td>
+        </tr>
+    </table>
+
+</div>
+</html>

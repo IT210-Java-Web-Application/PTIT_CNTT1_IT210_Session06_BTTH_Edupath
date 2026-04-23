@@ -1,0 +1,238 @@
+* {
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #f8fafc; /* Màu nền xám xanh nhạt */
+    color: #1e293b; /* Màu chữ xanh đen chính */
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: #ffffff;
+    color: #10b981; /* Màu xanh lá hiện đại */
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -1.5px;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+}
+
+/* NAVBAR */
+nav {
+    background: #ffffff;
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+nav a {
+    color: #64748b;
+    margin: 0 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #10b981;
+}
+
+/* CONTAINER */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+/* SEARCH BAR */
+.search-bar {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 35px;
+}
+
+.search-bar form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    background: transparent;
+    padding: 0;
+}
+
+.search-bar select,
+.search-bar input {
+    padding: 12px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    outline: none;
+    flex: 1;
+    font-size: 0.95rem;
+}
+
+.search-bar input:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+th {
+    background: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+}
+
+th, td {
+    padding: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    text-align: left;
+}
+
+tr:hover {
+    background: #fdfdfd;
+}
+
+/* BUTTONS */
+button, .btn-link {
+    padding: 10px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+button {
+    background: #10b981;
+    color: #ffffff;
+}
+
+button:hover {
+    background: #059669;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-link {
+    background: #f1f5f9;
+    color: #334155;
+    margin-right: 8px;
+}
+
+.btn-link:hover {
+    background: #e2e8f0;
+    color: #10b981;
+}
+
+.btn-delete {
+    background: #fff1f2;
+    color: #e11d48;
+}
+
+.btn-delete:hover {
+    background: #e11d48;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+}
+
+/* FORM (EDIT PAGE) */
+form {
+    padding: 45px;
+    border-radius: 20px;
+    max-width: 550px;
+    margin: auto;
+}
+
+form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #475569;
+}
+
+form input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+form input:focus {
+    background: #ffffff;
+    border-color: #10b981;
+    outline: none;
+}
+
+/* DETAIL PAGE */
+.detail-box {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    max-width: 750px;
+    margin: auto;
+    border-left: 6px solid #10b981;
+}
+
+.detail-box h2 {
+    color: #10b981;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.badge-full {
+    background: #ef4444;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.8rem;
+    display: inline-block;
+}
+
+/* EMPTY MESSAGE */
+.empty {
+    text-align: center;
+    padding: 60px;
+    background: #ffffff;
+    border-radius: 16px;
+    color: #94a3b8;
+    font-size: 1.2rem;
+    border: 2px dashed #e2e8f0;
+}
