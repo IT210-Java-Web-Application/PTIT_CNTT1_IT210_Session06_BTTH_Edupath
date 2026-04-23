@@ -48,9 +48,35 @@ public class CourseRepository {
         c3.setMaxStudent(15);
         c3.setStartDate(LocalDate.now().plusDays(5));
 
+        Course c4 = new Course();
+        c4.setCode("TOEIC-800");
+        c4.setName("TOEIC 800+");
+        c4.setLevel("Intermediate");
+        c4.setPrice(250);
+        c4.setDescription("Luyện thi TOEIC đạt 800+");
+        c4.setInstructor("Ms. Lisa");
+        c4.setDuration(3);
+        c4.setStudentCount(2);
+        c4.setMaxStudent(20);
+        c4.setStartDate(LocalDate.now().plusDays(6));
+
+        Course c5 = new Course();
+        c5.setCode("SPEAKING-PRO");
+        c5.setName("Speaking Pro");
+        c5.setLevel("Advanced");
+        c5.setPrice(350);
+        c5.setDescription("Nâng cao kỹ năng giao tiếp chuyên sâu");
+        c5.setInstructor("Mr. Alex");
+        c5.setDuration(2);
+        c5.setStudentCount(0);
+        c5.setMaxStudent(15);
+        c5.setStartDate(LocalDate.now().plusDays(3));
+
         courses.put(c1.getCode(), c1);
         courses.put(c2.getCode(), c2);
         courses.put(c3.getCode(), c3);
+        courses.put(c4.getCode(), c4);
+        courses.put(c5.getCode(), c5);
     }
 
     public Collection<Course> findAll() {
